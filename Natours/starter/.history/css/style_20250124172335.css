@@ -1,0 +1,75 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/*Basic reset using the universal selector
+Some browsers add margin or padding by default to elements and we don't want that.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    /*95% of the viewport height*/
+    height: 95vh;
+    /* 
+    diagonal gradient going top-left -> bottom-right
+    from light green to dark green 
+    */
+    background-image: linear-gradient(
+        to right bottom,
+        #7ed56fcc,
+        #28b485cc),
+        url("../img/hero.jpg");
+    background-size: cover;
+    /*
+    When you strech the viewport the top of the image will remain visible and the rest of the photo will dissapear
+    */
+    background-position: top;
+    /*
+    give the coordinates of 4 points (or maybe 3 if you want a triangle or more)
+    x axis (horizontal) first and then the y axis (vertical)
+    */
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    /* in order to use position:absolute to the logo-box we need to set the parent to position: relative*/
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left:40px;
+}
+
+.logo {
+    /* we only specify the height and the width width will scale acordingly*/
+    height: 35px;
+}
+
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+
+}
+
+.heading-primary-sub{
+
+}

@@ -147,7 +147,6 @@ body {
   }
 }
 
-/*We apply same styling for when a link is visited or not visited.*/
 .btn:link,
 .btn:visited {
   text-transform: uppercase;

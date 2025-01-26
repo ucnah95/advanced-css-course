@@ -136,80 +136,22 @@ body {
   }
 }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-/*We apply same styling for when a link is visited or not visited.*/
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
-  border-radius: 100px;
-  /*
-  all the properties are enabled to be animated
-  */
-  transition: all 0.2s;
-  position: relative;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  /*
-  first is the x direction
-  second value de y direction ( so now we have a shadow at the bottom)
-  3rd value blur, so will look blurry
-  4rd param a color for the shadow black but transparent 20 % opacity
-  */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
   background-color: #fff;
   color: #777;
-}
-
-/*Inserts a pseudo element after the button, that can be styled. In this case we want a new element behind the button that will scale when on hover.*/
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn-white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn-animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  /*
-  automatically applies the 0% styling before the animation starts => the button is not visible at the start.
-  */
-  animation-fill-mode: backwards;
 }

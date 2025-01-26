@@ -1,0 +1,20 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/*Basic reset using the universal selector
+Some browsers add margin or padding by default to elements and we don't want that.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ;
+}
